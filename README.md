@@ -10,5 +10,5 @@ Peer-graded assignment for Course 3 of Data Science
   for each activity and each subject.  It then produces the tidy-data.txt
 * tidy-data.txt
   + This contains the output of the summary data produced by the R script
-* Readme.md
+* README.md
   + This Readme file
