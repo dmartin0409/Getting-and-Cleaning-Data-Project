@@ -1,0 +1,94 @@
+---
+title: "Getting and Cleaning Data Project"
+output: html_document
+---
+
+# Peer-graded Assignment Codebook
+
+This document contains a description of the variables used in the R script as well as
+information on the original data set.
+
+## R script variables
+
+In the *run_analysis.R* script, the following variables are used to import the orginal data.
+
+* train_subject == Training data list of subjects (range 1..30)
+* train_x == Training data for the signal data (see Signal Data below)
+* train_y == Training data for the activity
+
+* test_subject == Testing data list of subjects (range 1..30)
+* test_x == Testing data for the signal data (see Signal Data below)
+* test_y == Testing data for the activity
+
+* features == Names given to each of the 561 features
+* activities == Names given to each of the 6 activities
+
+### Combined Data
+
+The following data are a joint combination of the training and testing data
+
+* joint_subject == Combined subject list
+* joint_x == Combined signal data
+* joint_y == Combined activity data
+
+* joint.mean == The mean of each signal data
+* joint.sd == The standard deviation of the signal data
+
+### Summary Data
+
+* SummaryData == The tidy data set with the average of each variable for each activity and each subject
+
+
+
+## Signal Data
+
+These signals were used to estimate variables of the feature vector for each pattern:
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are:
+
+* mean(): Mean value
+* std(): Standard deviation
+* mad(): Median absolute deviation
+* max(): Largest value in array
+* min(): Smallest value in array
+* sma(): Signal magnitude area
+* energy(): Energy measure. Sum of the squares divided by the number of values.
+* iqr(): Interquartile range
+* entropy(): Signal entropy
+* arCoeff(): Autorregresion coefficients with Burg order equal to 4
+* correlation(): correlation coefficient between two signals
+* maxInds(): index of the frequency component with largest magnitude
+* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+* skewness(): skewness of the frequency domain signal
+* kurtosis(): kurtosis of the frequency domain signal
+* bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+* angle(): Angle between to vectors.
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+The complete list of variables of each feature vector is available in 'features.txt'
